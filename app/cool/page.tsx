@@ -1,4 +1,8 @@
 export default async function Cool() {
+  await new Promise((resolve) => setTimeout(resolve, 2000));
+  if (Math.random() > 0.5) {
+    throw new Error(`Error ${Math.random().toFixed(2)}`);
+  }
   return (
     <div className="h-full w-full">
       <div className="flex flex-col gap-8 p-8">

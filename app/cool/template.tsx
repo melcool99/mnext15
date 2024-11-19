@@ -14,13 +14,13 @@ export default function CoolLayout({
         <Link href="/cool/settings">Settings</Link>
         <Link href="/cool/profile">Profile</Link>
       </nav>
-      {/* <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.2 }}
-      > */}
-      {children}
-      {/* </motion.div> */}
+      <motion.div
+        initial={{ opacity: 0, x: -200 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.5, ease: 'easeOut' }}
+      >
+        {children}
+      </motion.div>
     </div>
   );
 }
